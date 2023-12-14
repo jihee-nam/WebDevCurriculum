@@ -1,20 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8">
 		<!-- TODO: 또 무엇이 필요할까요? -->
+        <title>Quest 01</title>
 	</head>
 	<body>
 		<header>
 			<!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
-		</header>
-
-		<section class="main">
+            <!--header : 네비게이션, 검색창, 메뉴 삽입-->
+            <div id="menu">
+                <a href="http://naver.com/">목록</a>
+            </div>
+            <div id="" align="right">
+                <right>
+                    <nav>
+                        <a href="https://qr.naver.com/">QR 체크인</a>
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=http%3A%2F%2Fnew-m.pay.naver.com%2Fpcpay&locale=ko_KR&svctype=1&disposable=">Npay</a>
+                        <a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fmail.naver.com%2F">mail</a>
+                    </nav>
+                </right>
+            </div>
+            <div id="logo">
+                <center>
+                    <a href="https://www.naver.com/">
+                        <img src="/naverLogo.png" alt="네이버로고" width="30%"></center>
+                    </a>
+            </div>
+            <div id="search">
+                <center><input type="search" style="width: 50%;height:45px" placeholder="search..."></center>
+            </div>
+            <div id="menu">
+                <table align="center" width="60%" height="100">
+                    <tr>
+                        <td align="center">
+                            <a href="https://news.naver.com/" target="_blank">
+                                <img src="/unnamed.png" alt="뉴스" style="width: 50px;">
+                            </a></td>
+                        <td align="center">
+                            <a href="https://finance.naver.com/" target="_blank">
+                                <img src="/unnamed.png" alt="경제지표" style="width:50px;">
+                            </a></td>
+                        <td align="center">
+                            <a href="https://section.cafe.naver.com/ca-fe/home" target="_blank">
+                                <img src="/unnamed.png" alt="까페" style="width:50px;">
+                            </a></td>
+                        <td align="center"><a href="https://comic.naver.com/index" target="_blank">
+                            <img src="/unnamed.png" alt="웹툰" style="width:50px;">
+                        </a><br></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><a href="https://dict.naver.com/" target="_blank">
+                            <img src="/unnamed.png" alt="사전" style="width:50px;">
+                        </a></td>
+                        <td align="center"><a href="https://tv.naver.com/" target="_blank">
+                            <img src="/unnamed.png" alt="네이버티비" style="width:50px;">
+                        </a></td>
+                        <td align="center"><a href="https://kin.naver.com/" target="_blank">
+                            <img src="/unnamed.png" alt="지식IN" style="width:50px;">
+                        </a></td>
+                        <td align="center"><a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0" target="_blank">
+                            <img src="/unnamed.png" alt="블로그" style="width:50px;">
+                        </a></td>
+                    </tr>
+                </table>
+            </div>
+        </header>
+		<main>
 			<!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
-		</section>
-
+            <!--Main : 영역 나눔, div 사용-->
+            <div id="main1">
+                <table align="center" width="60%" border="1px" height="100">
+                    <tr>
+                        <td align="center">날씨 부분</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div id="main2">
+                <table align="center" width="60%" border="1px" height="100">
+                    <tr>
+                        <td align="center">날씨 부분</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div id="main3">
+                <table align="center" width="60%" border="1px" height="100">
+                    <tr>
+                        <td align="center">Covid</td>
+                        <td align="center">Post Covid</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <!--반복문 처리 방식-->
+            <center>
+                <script language="JavaScript">
+                    for ( let i=0 ; i < 3 ; i++ ) {
+                        document.write(`<li> ${i} 번째 리스트 입니다. </li>`);
+                    };
+                </script>
+            </center>
+		</main>
 		<footer>
 			<!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
-		</footer>
+            <br><br>
+            <div id="footer">
+                <center>
+                    <nav>
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/">로그인</a>
+                        <a href="https://policy.naver.com/rules/privacy.html">개인정보처리방침</a>
+                        <a href="https://policy.naver.com/policy/service.html">이용약관</a>
+                    </nav>
+                </center>
+            </div>
+            <div id="footerLogo">
+                <br>
+                <center>
+                    <a href="https://www.naver.com/">
+                        <img src="/02 NAVER Logo_Black.png" alt="블랙네이버로고" width="10%"></center>
+                    </a>
+            </div>
+        </footer>
 	</body>
 </html>

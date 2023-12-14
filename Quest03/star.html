@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>star</title>
+    </head>
+    <body>
+        <script>
+            let rowNum = parseInt(prompt('줄의 수를 입력하시오.'));
+            for ( let i = 1; i <= rowNum; i++ ) {//row number
+                let stars = printStars(i);
+                //각 줄마다 자릿수를 설정해서 앞쪽에 공백으로 넣기
+                console.log(stars.padStart(rowNum-i+stars.length));
+            }
+            
+            function printStars(rowNum) {
+                let stars = '';
+                for ( let j = 0; j < (2*rowNum-1); j++ ) {//draw starts
+                    stars = stars.concat('*');
+                }
+                return stars;
+            }
+        </script>
+    </body>
+</html>

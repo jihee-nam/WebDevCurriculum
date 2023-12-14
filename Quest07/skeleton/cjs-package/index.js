@@ -4,12 +4,20 @@ class CjsUtilClass {
     }
 
     double() {
-        return foo * 2;
+        //return foo * 2;
+        return this.foo * 2;
     }
 }
 
 const cjsUtilFunction = str => {
     return str.toUpperCase();
 };
+//exports.CjsUtilClass = CjsUtilClass;
+//exports.cjsUtilFunction = cjsUtilFunction;
+
+module.exports = {
+    CjsUtilClass,
+    cjsUtilFunction
+}
 
 // TODO: 다른 패키지가 CjsUtilClass와 cjsUtilFunction를 가져다 쓰려면 어떻게 해야 할까요?

@@ -1,1 +1,47 @@
 /* TODO: 자유롭게 바탕화면 시스템의 CSS를 만들어 보세요! */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.div {
+    margin: 50px;
+}
+.desktop {
+    background: url('diego-ph-5LOhydOtTKU-unsplash.jpg') no-repeat left top fixed;
+    background-size: cover;
+    min-height: 100vh;display: flex;
+    
+    /*플레스 컨테이너 지정
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;*/
+}
+
+.activeContainer {
+    display: flex;
+}
+
+.container {
+    /*width: 800px;
+    height: 400px;*/
+    min-height: 100vh;
+    border: 1px solid gray;
+    
+}
+.box {
+    background-color: white;
+    display : inline-block;
+    position : absolute;
+    /*
+    
+    justify-content: center;
+    align-items: center;
+    margin: 0% auto;*/
+    width: 300px;
+    height: 300px;
+    margin: 0% auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

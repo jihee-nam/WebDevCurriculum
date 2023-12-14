@@ -7,12 +7,25 @@
 	</head>
 	<body>
 		<section class="desktop">
+			<div>
+			</div>
 		</section>
 
 		<script>
-			let myDesktop = new Desktop(
-				/* TODO: myDesktop 인스턴스의 생성자의 변수로 무엇이 들어가야 할까요? */
-			);
+			
+			/* TODO: myDesktop 인스턴스의 생성자의 변수로 무엇이 들어가야 할까요? 
+			let forlderNum = parseInt(prompt('몇 개의 폴더가 필요하신가요?'));
+			let iconNum = parseInt(prompt('몇 개의 아이콘이 필요하신가요?'));
+			let myDesktop = new Desktop(forlderNum, iconNum);
+			myDesktop.makeFolders();
+			myDesktop.makeIcons();
+			*/
+			let forlderNum = parseInt(prompt('몇 개의 폴더가 필요하신가요?'));
+			let iconNum = parseInt(prompt('몇 개의 아이콘이 필요하신가요?'));
+			let myDesktop = new Desktop(forlderNum, iconNum);
+			myDesktop.makeIcons();
+			myDesktop.makeFolders();
+
 		</script>
 	</body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./style.css">
+		<script src="./notepad.js"></script>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li id="newFileBtn">
+					<a href="#" class="btn">New file</a>
+				</li>
+				<li id="loadBtn">
+					<a href="#" class="btn">Load file</a>
+				</li>
+				<li id="saveBtn">
+					<a href="#" class="btn">Save</a>
+				</li>
+				<li id="removeBtn">
+					<a href="#" class="btn">Remove from dataSystem</a>
+				</li>
+				<li id="saveAllBtn">
+					<a href="#" class="btn">Save All</a>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div class="tab_menu">
+				<ul class="tab_list">
+				</ul>
+				<div class="cont_area">
+				</div>
+			</div>
+		</div>
+		  
+		<!-- TODO: 이 곳을 채워 클라이언트를 만들어 보세요 let notepad = new Notepad();-->
+		<script>
+			let notepadContainer = [];
+			const btn_newfile = document.querySelector("#newFileBtn");
+			btn_newfile.addEventListener('click', function(e) {
+                let notepad = new Notepad();
+				notepadContainer[notepad.id] = notepad;
+			});
+
+			const btn_load = document.querySelector("#loadBtn");
+			btn_load.addEventListener('click', function(e) {
+				let name = prompt('가져올 파일의 이름을 넣어주세요!');
+				loadDataFromApiServer(name);
+			});
+
+			const btn_save = document.querySelector("#saveBtn");
+			btn_save.addEventListener('click', function(e) {
+				let activeTab = document.querySelector('.is_on a');
+				let key = activeTab.getAttribute('href').substr(1);
+				let targetNotepad = notepadContainer[key];
+				targetNotepad.name = activeTab.textContent;
+				targetNotepad.save();
+			});
+
+			const btn_remove = document.querySelector("#removeBtn");
+			btn_remove.addEventListener('click', function(e) {
+				let activeTab = document.querySelector('.is_on a');
+				let key = activeTab.getAttribute('href').substr(1);
+				let targetNotepad = notepadContainer[key];
+
+				targetNotepad.remove();
+			});
+			
+			const btn_saveAll = document.querySelector("#saveAllBtn");
+			btn_saveAll.addEventListener('click', function(e) {
+				let tabArr = document.getElementsByClassName('tab_nameBtn');
+				let i = 0;
+				for ( let key in notepadContainer ) {
+					if ( document.getElementById(key) ) {
+						let targetNotepad = notepadContainer[key];
+						let saveKey = tabArr[i].getAttribute('href').substr(1);
+						targetNotepad.name = tabArr[i].textContent;
+						targetNotepad.save(saveKey);
+						i++;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
